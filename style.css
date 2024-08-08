@@ -1,0 +1,165 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 20px auto;
+  padding: 20px;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 2.5em;
+  color: #333;
+}
+
+header p {
+  font-size: 1.2em;
+  color: #555;
+  margin: 5px 0;
+}
+
+header ul {
+  list-style: none;
+  padding: 0;
+  margin: 20px 0 0;
+  font-size: 1em;
+}
+
+header ul li {
+  color: #777;
+}
+
+.intro {
+  margin-bottom: 20px;
+  font-size: 1.1em;
+  color: #333;
+}
+
+.payment-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.step {
+  margin-bottom: 20px;
+}
+
+.step h2 {
+  font-size: 1.8em;
+  margin-bottom: 10px;
+  color: #007bff;
+}
+
+.step label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.step input[type='text'],
+.step input[type='tel'] {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.diamond-options {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 15px;
+}
+
+.item {
+  background: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  padding: 15px;
+  text-align: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.item:hover {
+  background-color: #e9ecef;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.icon-item {
+  width: 24px;
+  height: 24px;
+  background: url('icon-checkmark.png') no-repeat center center;
+  background-size: contain;
+  margin: 0 auto 10px;
+}
+
+.icon-item::after {
+  content: '✔';
+  font-size: 16px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: none;
+}
+
+.item.selected .icon-item::after {
+  display: block;
+}
+
+.item.selected {
+  background-color: rgba(0, 81, 255, 0.565);
+}
+.item.selected .icon-item {
+  background: url('icon-checkmark-selected.png') no-repeat center center;
+  background-size: contain;
+}
+
+.item p {
+  margin: 5px 0;
+  font-size: 1em;
+  color: #333;
+}
+
+.payment-methods label {
+  display: block;
+  margin-bottom: 10px;
+  font-size: 1em;
+  color: #333;
+}
+
+button {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  padding: 15px;
+  font-size: 1.1em;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+@media (max-width: 768px) {
+  .diamond-options {
+    grid-template-columns: 1fr;
+  }
+}

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Menu Pembayaran Mobile Legends</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src=""></script>
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <h1>Mobile Legends</h1>
+        <p>Jaminan Layanan</p>
+        <ul>
+          <li>Layanan Pelanggan 24/7</li>
+          <li>Pembayaran yang Aman</li>
+          <li>Pengiriman Instant</li>
+        </ul>
+      </header>
+
+      <section class="intro">
+        <p>Top up Diamond ML hanya dalam hitungan detik! Cukup masukan User ID & Server MLBB Anda, Pilih jumlah Diamond yang Anda inginkan, Selesaikan pembayaran Dan Diamond akan langsung masuk ke akun Mobile Legends Anda.</p>
+        <p>Khusus Server Original, Tidak Bisa Isi Advance Server!</p>
+      </section>
+
+      <form class="payment-form">
+        <!-- Step One -->
+        <div class="step">
+          <h2>Step One: Masukkan User ID</h2>
+          <label for="user-id">User ID</label>
+          <input type="text" id="user-id" name="user-id" placeholder="Masukkan User ID" />
+          <label for="server-id">Server ID</label>
+          <input type="text" id="server-id" name="server-id" placeholder="Masukkan Server ID" />
+        </div>
+
+        <div class="step">
+          <h2>Step Two: Pilih Nominal Top Up</h2>
+          <div class="diamond-options">
+            <div class="item" onclick="selectItem(this)">
+              <div class="icon-item"></div>
+              <p>50 Diamond</p>
+              <p>Rp 3.999,-</p>
+            </div>
+            <div class="item" onclick="selectItem(this)">
+              <div class="icon-item"></div>
+              <p>100 Diamond</p>
+              <p>Rp 8.000,-</p>
+            </div>
+            <div class="item" onclick="selectItem(this)">
+              <div class="icon-item"></div>
+              <p>200 Diamond</p>
+              <p>Rp 10.000,-</p>
+            </div>
+            <div class="item" onclick="selectItem(this)">
+              <div class="icon-item"></div>
+              <p>400 Diamond</p>
+              <p>Rp 20.000,-</p>
+            </div>
+            <div class="item" onclick="selectItem(this)">
+              <div class="icon-item"></div>
+              <p>600 Diamond</p>
+              <p>Rp 34.000,-</p>
+            </div>
+            <div class="item" onclick="selectItem(this)">
+              <div class="icon-item"></div>
+              <p>100.000 Diamond</p>
+              <p>Rp 100.000,-</p>
+            </div>
+            <!-- Add more items as needed -->
+          </div>
+        </div>
+
+        <!-- Step Three -->
+        <div class="step">
+          <h2>Step Three: Pilih Pembayaran</h2>
+          <div class="payment-methods">
+            <label><input type="radio" name="payment" value="qris" /> DANA</label>
+            <label><input type="radio" name="payment" value="ewallet" /> GOPAY</label>
+            <label><input type="radio" name="payment" value="convenience-store" /> QRIS</label>
+            <label><input type="radio" name="payment" value="virtual-account" /> Virtual Account</label>
+          </div>
+        </div>
+
+        <!-- Step Four -->
+        <div class="step">
+          <h2>Step Four: Kode Promo</h2>
+          <label for="promo-code">KODE VOUCHER</label>
+          <input type="text" id="promo-code" name="promo-code" placeholder="Pakai Voucher" />
+        </div>
+
+        <!-- Step Five -->
+        <div class="step">
+          <h2>Step Five: Nomor Whatsapp</h2>
+          <label for="whatsapp-number">Masukkan nomor anda untuk menyimpan riwayat pesanan ini.</label>
+          <input type="tel" id="whatsapp-number" name="whatsapp-number" placeholder="08xxxxxxxxx\" />
+        </div>
+
+        <button type="submit">Konfirmasi Top Up</button>
+      </form>
+    </div>
+
+    <script src="java.js"></script>
+  </body>
+</html>
